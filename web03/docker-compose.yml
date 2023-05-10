@@ -1,9 +1,8 @@
-version: '3.9'
+version: '3.1'
 services:
-  apache:
+  apache2:
     image: httpd:latest
-    container_name: my-apache-app
     ports:
     - '8083:80'
     volumes:
-    - ./website:/usr/local/apache2/htdocs
+    - ./app:/usr/local/apache2/htdocs
